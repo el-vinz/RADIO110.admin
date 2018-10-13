@@ -15,7 +15,7 @@ track1=$(curl -s $source | sed 's/<[^>]*>//g' | awk -F 'playing:' {'print $2'} |
 
 echo "$track1"
 
-sleep 1
+sleep 20
 
 echo "$track2"
 track2=$(curl -s $source | sed 's/<[^>]*>//g' | awk -F 'playing:' {'print $2'} | sed '/^$/d')
